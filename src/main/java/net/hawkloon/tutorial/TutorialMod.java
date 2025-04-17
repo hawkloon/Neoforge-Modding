@@ -78,6 +78,9 @@ public class TutorialMod
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.STIMPAK);
         }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.XANDER_ROOT);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

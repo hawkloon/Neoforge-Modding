@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "#",
-    "R",
-    "I"
-  ],
   "key": {
     "#": {
-      "item": "minecraft:lever"
-    },
-    "R": {
-      "item": "minecraft:rotten_flesh"
-    },
-    "I": {
       "item": "minecraft:iron_bars"
+    },
+    "X": {
+      "item": "tutorialmod:xander_root"
+    },
+    "F": {
+      "item": "minecraft:lever"
     }
   },
+  "pattern": [
+    "F",
+    "X",
+    "#"
+  ],
   "result": {
     "count": 1,
     "id": "tutorialmod:stimpak"

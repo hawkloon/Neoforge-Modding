@@ -11,7 +11,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> STIMPAK = ITEMS.register("stimpak",
             () -> new StimpakItem(new Item.Properties().durability(1)));
-
+    public static final DeferredItem<Item> XANDER_ROOT = ITEMS.register("xander_root",
+            ()-> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
