@@ -1,11 +1,16 @@
 package net.hawkloon.tutorial.item;
 
 import net.hawkloon.tutorial.TutorialMod;
+import net.hawkloon.tutorial.potion.ModPotions;
+import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -21,8 +26,17 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.turtorialmod.aid"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.STIMPAK);
+                        output.accept(ModItems.XANDER_ROOT);
+                        output.accept(ModItems.NUKA_COLA);
+                        output.accept(ModItems.NUKA_COLA_EMPTY);
+                        output.accept(ModItems.NUKA_COLA_SWORD.get());
                     }).build());
 
+    public static ItemStack makePotionStack(Holder<Potion> potion, Item baseItem){
+        ItemStack stack = new ItemStack(baseItem);
+        stack.set(DataComponents.POTION_CONTENTS, new PotionContents(potion));
+        return stack;
+    }
     public static void register(IEventBus eventBus){
         TAB.register(eventBus);
     }

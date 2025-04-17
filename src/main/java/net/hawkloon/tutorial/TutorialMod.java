@@ -2,6 +2,7 @@ package net.hawkloon.tutorial;
 
 import net.hawkloon.tutorial.item.ModCreativeModeTabs;
 import net.hawkloon.tutorial.item.ModItems;
+import net.hawkloon.tutorial.potion.ModPotions;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -60,6 +61,8 @@ public class TutorialMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModPotions.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 

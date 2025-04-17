@@ -1,5 +1,11 @@
 {
   "item.tutorialmod.stimpak": "Stimpak",
   "item.tutorialmod.xander_root": "Xander Root",
+  "item.tutorialmod.nuka_cola.effect.empty": "Nuka Cola (Empty)",
+  "item.tutorialmod.nuka_cola.effect.nuka_cola": "Nuka Cola",
+  "item.tutorialmod.nuka_cola": "Nuka Cola",
+  "item.tutorialmod.nuka_cola_empty": "Nuka Cola (Empty)",
+  "item.minecraft.potion.effect.nuka_cola": "Nuka Cola",
+  "item.tutorialmod.nuka_cola_sword": "Nuka Cola Sword",
   "creativetab.turtorialmod.aid": "Fallout Aid Items"
 }
