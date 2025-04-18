@@ -1,10 +1,12 @@
 package net.hawkloon.tutorial.item;
 
 import net.hawkloon.tutorial.TutorialMod;
+import net.hawkloon.tutorial.block.ModBlocks;
 import net.hawkloon.tutorial.potion.ModPotions;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PotionItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.alchemy.PotionContents;
@@ -37,6 +39,9 @@ public class ModItems {
                     12,
                     0.0f
             ))));
+
+    public static final DeferredItem<Item> XANDER_SEEDS = ITEMS.register("xander_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.XANDER_CROP.get(), new Item.Properties()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

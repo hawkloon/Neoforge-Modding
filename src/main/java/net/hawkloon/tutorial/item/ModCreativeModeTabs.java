@@ -31,6 +31,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NUKA_COLA_EMPTY);
                         output.accept(ModItems.NUKA_COLA_SWORD.get());
                     }).build());
+    public static final Supplier<CreativeModeTab> CROPS_TAB = TAB.register("crop_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.XANDER_SEEDS.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TutorialMod.MODID, "aid_tab"))
+                    .title(Component.translatable("creativetab.tutorialmod.crop"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.XANDER_SEEDS);
+                    }).build());
 
     public static ItemStack makePotionStack(Holder<Potion> potion, Item baseItem){
         ItemStack stack = new ItemStack(baseItem);
